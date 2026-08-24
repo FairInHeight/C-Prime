@@ -75,7 +75,6 @@ C_SPECIAL = {
     "_Alignof",
     "_Generic",
     "_Static_assert",
-    "_Static_assert",
     "nullptr",
     "constexpr",
 }
@@ -110,13 +109,15 @@ PRIME_TYPES = {
     "quad",
     "wide",
     "unic",
-    "bool",
+}
+
+PRIME_MODIFIERS = {
+    "final",
 }
 
 # Prime modifiers
 PRIME_COMPOUNDS = {
     "class",
-    "final",
 }
 
 PRIME_POLYMORPHISM = {
