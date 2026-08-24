@@ -2,7 +2,6 @@ from enum import Enum, auto
 
 from .token import Dialect, Scope, Token, TokenKind
 
-
 class LexerMode(Enum):
     NORMAL = auto()
     STRING = auto()

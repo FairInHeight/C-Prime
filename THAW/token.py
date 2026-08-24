@@ -26,8 +26,10 @@ class TokenKind(Enum):
 
 class Scope(Enum):
     FILE = auto()
-    CLASS = auto()
     BLOCK = auto()
+    FUNCTION = auto()
+    PROTOTYPE = auto()
+    CLASS = auto()
 
 
 @dataclass
