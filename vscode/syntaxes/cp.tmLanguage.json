@@ -1,0 +1,182 @@
+{
+    "scopeName": "source.cp",
+    "patterns": [
+        {
+            "include": "#preprocessor"
+        },
+        {
+            "include": "#numbers"
+        },
+        {
+            "include": "#characters"
+        },
+        {
+            "include": "#strings"
+        },
+                {
+            "include": "#comments"
+        },
+        {
+            "include": "#operators"
+        },
+        {
+            "include": "#punctuation"
+        },
+        {
+            "include": "#declarations"
+        },
+        {
+            "include": "#keywords"
+        },
+        {
+            "include": "#constants"
+        },
+        {
+            "include": "#special"
+        }
+    ],
+    "repository": {
+        "keywords": {
+            "patterns": [
+                {
+                    "name": "storage.type.cp",
+                    "match": "\\b(void|bool|char|short|int|long|float|double|signed|unsigned)\\b"
+                },
+                {
+                    "name": "keyword.control.cp",
+                    "match": "\\b(if|else|for|while|do|switch|case|default|break|continue|return|goto)\\b"
+                },
+                {
+                    "name": "storage.modifier.cp",
+                    "match": "\\b(const|volatile|restrict|static|extern|auto|register|inline|_Atomic|_Thread_local)\\b"
+                }
+            ]
+        },
+        "comments": {
+            "patterns": [
+                {
+                    "name": "comment.line.double-slash.cp",
+                    "match": "//.*$"
+                }
+            ]
+        },
+        "preprocessor": {
+            "patterns": [
+                {
+                    "name": "keyword.control.directive.cp",
+                    "match": "^\\s*#\\s*[A-Za-z_]+"
+                }
+            ]
+        },
+        "numbers": {
+            "patterns": [
+                {
+                    "name": "constant.numeric.cp",
+                    "match": "\\b(0[xX][0-9a-fA-F]+|0[bB][01]+|0[0-7]+|[0-9]+(\\.[0-9]*)?([eE][+-]?[0-9]+)?)[uUlLfF]*\\b"
+                }
+            ]
+        },
+        "operators": {
+            "patterns": [
+                {
+                    "name": "keyword.operator.cp",
+                    "match": ">>=?|<<=?|\\+\\+|--|&&|\\|\\||==|!=|<=|>=|->|\\+=|-=|\\*=|/=|%=|&=|\\|=|\\^=|[+\\-*/%=&|^~!<>?:]"
+                }
+            ]
+        },
+        "strings": {
+            "patterns": [
+                {
+                    "name": "string.quoted.double.cp",
+                    "begin": "\"",
+                    "end": "\"",
+                    "patterns": [
+                        {
+                            "name": "constant.character.escape.cp",
+                            "match": "\\\\."
+                        }
+                    ]
+                }
+            ]
+        },
+        "characters": {
+            "patterns": [
+                {
+                    "name": "string.quoted.single.cp",
+                    "begin": "'",
+                    "end": "'",
+                    "patterns": [
+                        {
+                            "name": "constant.character.escape.cp",
+                            "match": "\\\\."
+                        }
+                    ]
+                }
+            ]
+        },
+        "punctuation": {
+            "patterns": [
+                {
+                    "name": "punctuation.separator.cp",
+                    "match": "[;,]"
+                },
+                {
+                    "name": "punctuation.accessor.cp",
+                    "match": "\\.|->"
+                },
+                {
+                    "name": "punctuation.separator.case.cp",
+                    "match": ":"
+                }
+            ]
+        },
+        "constants": {
+            "patterns": [
+                {
+                    "name": "constant.language.cp",
+                    "match": "\\b(NULL|true|false)\\b"
+                }
+            ]
+        },
+        "declarations": {
+            "patterns": [
+                {
+                    "name": "storage.type.struct.cp",
+                    "match": "\\bstruct\\b"
+                },
+                {
+                    "name": "storage.type.union.cp",
+                    "match": "\\bunion\\b"
+                },
+                {
+                    "name": "storage.type.enum.cp",
+                    "match": "\\benum\\b"
+                },
+                {
+                    "name": "storage.type.typedef.cp",
+                    "match": "\\btypedef\\b"
+                }
+            ]
+        },
+        "special": {
+            "patterns": [
+                {
+                    "name": "keyword.operator.sizeof.cp",
+                    "match": "\\bsizeof\\b"
+                },
+                {
+                    "name": "keyword.operator.alignof.cp",
+                    "match": "\\b_Alignof\\b"
+                },
+                {
+                    "name": "keyword.operator.generic.cp",
+                    "match": "\\b_Generic\\b"
+                },
+                {
+                    "name": "keyword.other.static-assert.cp",
+                    "match": "\\b_Static_assert\\b"
+                }
+            ]
+        }
+    }
+}

@@ -1,0 +1,34 @@
+{
+    "name": "c-prime-lang",
+    "displayName": "C'",
+    "description": "Language support for C'",
+    "version": "0.0.1",
+    "publisher": "FairInHeight",
+    "engines": {
+        "vscode": "^1.80.0"
+    },
+    "contributes": {
+        "languages": [
+            {
+                "id": "cprime",
+                "aliases": ["C'", "cp"],
+                "extensions": [".cp"],
+                "configuration": "./language-configuration.json"
+            }
+        ],
+        "grammars": [
+            {
+                "language": "cprime",
+                "scopeName": "source.cp",
+                "path": "./syntaxes/cp.tmLanguage.json"
+            }
+        ],
+        "themes": [
+            {
+                "label": "C Prime",
+                "uiTheme": "vs-dark",
+                "path": "./themes/default.json"
+            }
+        ]
+    }
+}

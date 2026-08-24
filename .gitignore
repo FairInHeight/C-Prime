@@ -1,0 +1,20 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyd
+
+# Build output
+build/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# VS Code local state
+.vscode/*.log
+
+# Root-level source files
+/*.c
+/*.cp
+/*.cpp

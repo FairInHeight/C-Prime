@@ -1,0 +1,72 @@
+{
+    "name": "C Prime",
+    "type": "dark",
+
+    "colors": {
+        "titleBar.activeBackground": "#000000",
+
+        "sideBar.background": "#191a1b",
+        "sideBar.foreground": "#c0c0c0",
+        "sideBar.border": "#ff0000",
+
+        "editor.background": "#121314",
+        "editor.foreground": "#D4D4D4"
+    },
+    
+    "tokenColors": [
+        {
+            "scope": "storage.type.cp",
+            "settings": {
+                "foreground": "#ffaa68"
+            }
+        },
+        {
+            "scope": "storage.modifier.cp",
+            "settings": {
+                "foreground": "#ff8888"
+            }
+        },
+        {
+            "scope": "keyword.control.cp",
+            "settings": {
+                "foreground": "#ff88aa"
+            }
+        },
+        {
+            "scope": "keyword.operator.cp",
+            "settings": {
+                "foreground": "#ffffaa"
+            }
+        },
+        {
+            "scope": "constant.numeric.cp",
+            "settings": {
+                "foreground": "#B5CEA8"
+            }
+        },
+        {
+            "scope": "constant.language.cp",
+            "settings": {
+                "foreground": "#569CD6"
+            }
+        },
+        {
+            "scope": "string.quoted.double.cp",
+            "settings": {
+                "foreground": "#88ff88"
+            }
+        },
+        {
+            "scope": "string.quoted.single.cp",
+            "settings": {
+                "foreground": "#aaffaa"
+            }
+        },
+        {
+            "scope": "comment",
+            "settings": {
+                "foreground": "#808080"
+            }
+        }
+    ]
+}
