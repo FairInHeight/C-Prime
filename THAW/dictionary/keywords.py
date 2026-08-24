@@ -36,6 +36,7 @@ TYPES = {
     "float",
     "double",
     "_Bool",
+    "bool",
 }
 
 # Type specifiers / modifiers
@@ -61,13 +62,22 @@ COMPOUND_TYPES = {
     "enum",
 }
 
+TYPE_OPERATORS = {
+    "typeof",
+    "typeof_unqual",
+}
+
 # C special keywords / constructs
 C_SPECIAL = {
+    "true",
+    "false",
     "sizeof",
     "_Alignof",
     "_Generic",
     "_Static_assert",
     "_Static_assert",
+    "nullptr",
+    "constexpr",
 }
 
 
@@ -89,21 +99,33 @@ PRIME_ACCESS = {
 
 # Prime storage / declarations
 PRIME_DECLARATIONS = {
-    
+    "let",
+    "shared",
+    "global",
 }
 
 # Prime types
 PRIME_TYPES = {
     "half",
     "quad",
+    "wide",
+    "unic",
+    "bool",
 }
 
 # Prime modifiers
-PRIME_MODIFIERS = {
-    
+PRIME_COMPOUNDS = {
+    "class",
+    "final",
+}
+
+PRIME_POLYMORPHISM = {
+    "morph",
+    "ptype",
 }
 
 # Prime special keywords / constructs
 PRIME_SPECIAL = {
-    
+    "event",
+    "proc",
 }
