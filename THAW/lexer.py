@@ -1,6 +1,7 @@
 from enum import Enum, auto
 
 from .token import Dialect, Scope, Token, TokenKind
+from .dictionary import lookup_keyword
 
 class LexerMode(Enum):
     NORMAL = auto()
@@ -112,11 +113,19 @@ class Lexer:
             self.advance()
 
         lexeme = self.source[start:self.state.position]
+        keyword = lookup_keyword(lexeme)
+
+        if keyword:
+            kind = keyword.kind
+            dialect = keyword.dialect
+        else:
+            kind = TokenKind.IDENTIFIER
+            dialect = Dialect.C
 
         self.tokens.append(
             Token(
-                kind=TokenKind.IDENTIFIER,
-                dialect=Dialect.C,
+                kind=kind,
+                dialect=dialect,
                 scope=self.state.scope,
                 lexeme=lexeme,
                 line=line,
@@ -267,7 +276,7 @@ class Lexer:
         column = self.state.column
         character = self.advance()
 
-        punctuation = "{}[]();,.:"
+        punctuation = "{}[]();,. :".replace(" ", "")
 
         if character in punctuation:
             kind = TokenKind.PUNCTUATION
