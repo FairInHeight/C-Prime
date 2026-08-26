@@ -1,17 +1,19 @@
-from THAW.dictionary import lookup_keyword
+from pathlib import Path
+
+from .lexer import Lexer
 
 
-tests = [
-    "int",
-    "bool",
-    "if",
-    "public",
-    "morph",
-    "typeof",
-    "class",
-    "potato",
-]
+source_path = Path(__file__).parent.parent / "test.cp"
+source = source_path.read_text(encoding="utf-8")
 
-for word in tests:
-    result = lookup_keyword(word)
-    print(f"{word}: {result}")
+lexer = Lexer(source)
+tokens = lexer.tokenize()
+
+for token in tokens:
+    print(
+        f"{token.line}:{token.column} "
+        f"{token.scope.name:<5} "
+        f"{token.dialect.name:<5} "
+        f"{token.kind.name:<12} "
+        f"{token.lexeme!r}"
+    )
