@@ -111,15 +111,17 @@ PRIME_TYPES = {
     "unic",
 }
 
+# Prime modifiers
 PRIME_MODIFIERS = {
     "final",
 }
 
-# Prime modifiers
+# Prime compounds
 PRIME_COMPOUNDS = {
     "class",
 }
 
+# Polymorphism
 PRIME_POLYMORPHISM = {
     "morph",
     "ptype",

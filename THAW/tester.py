@@ -1,27 +1,17 @@
-from .lexer import Lexer
+from THAW.dictionary import lookup_keyword
 
 
-source = """
-// C Prime test
+tests = [
+    "int",
+    "bool",
+    "if",
+    "public",
+    "morph",
+    "typeof",
+    "class",
+    "potato",
+]
 
-class Player
-{
-    int health;
-
-    void heal()
-    {
-        health += 10;
-    }
-}
-"""
-
-lexer = Lexer(source)
-
-for token in lexer.tokenize():
-    print(
-        f"{token.line}:{token.column} "
-        f"{token.scope.name:<5} "
-        f"{token.dialect.name:<6} "
-        f"{token.kind.name:<12} "
-        f"{token.lexeme!r}"
-    )
+for word in tests:
+    result = lookup_keyword(word)
+    print(f"{word}: {result}")
