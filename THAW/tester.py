@@ -7,7 +7,7 @@ source_path = Path(__file__).parent.parent / "test.cp"
 source = source_path.read_text(encoding="utf-8")
 
 lexer = Lexer(source)
-tokens = lexer.tokenize()
+tokens = lexer.scan()
 
 for token in tokens:
     print(
