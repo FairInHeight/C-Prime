@@ -1,3 +1,3 @@
-# [icon](cprime.png) C Prime
+# ![icon](cprime.png) C Prime
 
 A new programming language.
