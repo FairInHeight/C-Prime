@@ -43,3 +43,14 @@ ptype<T,U> T do_something(U a, U b)
 ```
 
 ## Modern Utilities
+
+### Immutability
+
+C's const is still available for a sort of "soft binding"  
+`bind` is available as an immutable variable option.
+```c
+bind pi = 3.14159
+```
+This means that pi cannot change. 
+
+C' is also experimenting with the idea of allowing programmers to mute and unmute their bindings. This can potentially offer security advantages.
