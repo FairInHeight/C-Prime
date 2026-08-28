@@ -87,6 +87,7 @@ C_SPECIAL = {
 # Prime control flow
 PRIME_CONTROL_FLOW = {
     "when",
+    "defer",
 }
 
 # Access control
