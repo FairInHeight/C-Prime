@@ -11,14 +11,14 @@ class, final, event
 
 ## Polymorphism
 
-generic (_Generic still exists)
+**generic** (_Generic still exists)  
 Ad Hoc
 ```c
 generic add(int a, int b)
 generic add(float a, float b)
 ```
 
-is
+**is**  
 Subtype
 ```c
 class Animal
@@ -35,7 +35,7 @@ class Dog is Animal
 }  
 ```
 
-ptype
+**ptype**  
 Parametric
 ```c
 ptype<T> T do_something(T a, T b)
