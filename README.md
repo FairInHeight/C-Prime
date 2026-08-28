@@ -49,7 +49,7 @@ ptype<T,U> T do_something(U a, U b)
 C's const is still available for a sort of "soft binding"  
 `bind` is available as an immutable variable option.
 ```c
-bind pi = 3.14159
+bind float pi = 3.14159
 ```
 This means that pi cannot change. 
 
